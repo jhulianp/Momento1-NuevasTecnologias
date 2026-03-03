@@ -1,5 +1,4 @@
 
-
 def menu_principal():
     # Lista de diccionarios para almacenar los gastos
     gastos = []
