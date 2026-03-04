@@ -5,7 +5,7 @@ def menu_principal():
     gastos = []
     
     while True:
-        print("--- CONTROL DE GASTOS HORMIGA ---")
+        print("\n--- CONTROL DE GASTOS HORMIGA ---")
         print("1. Registrar gasto")
         print("2. Gastos registrados (Mayor a menor)")
         print("3. Editar/Eliminar gastos")
@@ -23,7 +23,10 @@ def menu_principal():
         elif opcion == "4":
             calcular.total_gastos(gastos)
         elif opcion == "5":
-            print("La aplicacion se cerro con exito")
+            print("Gracias por usar la app.")
             break
         else:
             print("Opcion no valida.")
+
+if __name__ == "__main__":
+    menu_principal()
