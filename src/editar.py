@@ -2,21 +2,21 @@ import listar
 
 def menu_edicion(lista_gastos):
     while True:
-        print("--- Menú de Edición ---")
-        print("a. Ver gastos registrados")
-        print("b. Editar nombre, descripción o costo")
-        print("c. Eliminar un gasto")
-        print("d. Volver al menú principal")
+        print("--- Menu de Edicion ---")
+        print("1. Ver gastos registrados")
+        print("2. Editar nombre, descripcion o costo")
+        print("3. Eliminar un gasto")
+        print("4. Volver al menú principal")
         
-        sub_opcion = input("Seleccione una opción: ").lower()
+        sub_opcion = input("Seleccione una opcion: ").lower()
 
-        if sub_opcion == "a":
+        if sub_opcion == "1":
             listar.mostrar_gastos(lista_gastos)
-        elif sub_opcion == "b":
+        elif sub_opcion == "2":
             editar_detalles(lista_gastos)
-        elif sub_opcion == "c":
+        elif sub_opcion == "3":
             eliminar_gasto(lista_gastos)
-        elif sub_opcion == "d":
+        elif sub_opcion == "4":
             break
 
 def editar_detalles(lista_gastos):
@@ -29,18 +29,18 @@ def editar_detalles(lista_gastos):
             if nuevo_costo: g['costo'] = float(nuevo_costo)
             print("Gasto actualizado.")
             return
-    print("No se encontró ese gasto.")
+    print("No se encontro ese gasto.")
 
 def eliminar_gasto(lista_gastos):
-    nombre_buscar = input("Ingrese el nombre EXACTO del gasto que desea eliminar: ")
+    nombre_buscar = input("Ingrese el nombre exacto del gasto que desea eliminar: ")
     for i, g in enumerate(lista_gastos):
         if g['nombre'] == nombre_buscar: # Validación de seguridad estricta
             confirmacion = input(f"Para confirmar, escriba de nuevo el nombre '{g['nombre']}': ")
             if confirmacion == g['nombre']:
                 lista_gastos.pop(i)
-                print("Gasto eliminado con éxito.")
+                print("Gasto eliminado con exito.")
                 return
             else:
-                print("Los nombres no coinciden. Operación cancelada.")
+                print("Los nombres no coinciden. Operacion cancelada.")
                 return
     print("No se encontró un gasto con ese nombre exacto.")

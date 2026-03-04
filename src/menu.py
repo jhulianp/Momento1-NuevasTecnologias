@@ -1,4 +1,4 @@
-import registrar
+import registrar, listar, editar, calcular
 
 def menu_principal():
     # Lista de diccionarios para almacenar los gastos
@@ -7,7 +7,7 @@ def menu_principal():
     while True:
         print("\n--- CONTROL DE GASTOS HORMIGA ---")
         print("1. Registrar gasto")
-        print("2. Gastos registrados (Mayor a menor)")
+        print("2. Gastos registrados")
         print("3. Editar/Eliminar gastos")
         print("4. Calcular total")
         print("5. Salir")
